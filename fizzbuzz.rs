@@ -23,42 +23,30 @@ fn div_by_fifteen(num: i8) -> bool {
 
 #[test]
 fn test_div_by_three() {
-  if div_by_three(1) {
-    panic!("One is not three");
-  }
+  assert!(!div_by_three(1));
 }
 
 #[test]
 fn test_div_by_three_with_three() {
-  if !div_by_three(3) {
-    panic!("Three should be three");
-  }
+  assert!(div_by_three(3));
 }
 
 #[test]
 fn test_div_by_fifteen() {
-  if div_by_fifteen(1) {
-    panic!("One is not fifteen");
-  }
+  assert!(!div_by_fifteen(1));
 }
 
 #[test]
 fn test_div_by_fifteen_with_fifteen() {
-  if !div_by_fifteen(15) {
-    panic!("Fifteen should be fifteen");
-  }
+  assert!(div_by_fifteen(15));
 }
 
 #[test]
 fn test_div_by_five() {
-  if div_by_five(1) {
-    panic!("One is not five");
-  }
+  assert!(!div_by_five(1));
 }
 
 #[test]
 fn test_div_by_five_with_five() {
-  if !div_by_five(5) {
-    panic!("Five should be five");
-  }
+  assert!(div_by_five(5));
 }
