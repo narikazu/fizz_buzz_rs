@@ -1,20 +1,11 @@
 fn main() {
   for num in 1..=100 {
-    let answer =
-      if div_by_fifteen(num) {
-        "FizzBuzz".to_string()
-      }
-      else if div_by_three(num) {
-        "Fizz".to_string()
-      }
-      else if div_by_five(num) {
-        "Buzz".to_string()
-      }
-      else {
-        num.to_string()
-      };
-
-    println!("{}", answer);
+    println!("{}",
+      if div_by_fifteen(num) { "FizzBuzz".to_string() }
+      else if div_by_three(num) { "Fizz".to_string() }
+      else if div_by_five(num) { "Buzz".to_string() }
+      else { num.to_string() }
+    );
   }
 }
 
