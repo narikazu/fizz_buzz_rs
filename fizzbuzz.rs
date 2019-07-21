@@ -1,5 +1,34 @@
+fn main() {
+  for num in 1..=100 {
+    let mut answer = "";
+
+    if div_by_fifteen(num) {
+      answer = "FizzBuzz";
+    }
+    else if div_by_three(num) {
+      answer = "Fizz";
+    }
+    else if div_by_five(num) {
+      answer = "Buzz";
+    }
+    else {
+      answer = "";
+    };
+
+    println!("{}", answer);
+  }
+}
+
 fn div_by_three(num: i8) -> bool {
   num % 3 == 0
+}
+
+fn div_by_five(num: i8) -> bool {
+  num % 5 == 0
+}
+
+fn div_by_fifteen(num: i8) -> bool {
+  num % 15 == 0
 }
 
 #[test]
@@ -13,5 +42,33 @@ fn test_div_by_three() {
 fn test_div_by_three_with_three() {
   if !div_by_three(3) {
     panic!("Three should be three");
+  }
+}
+
+#[test]
+fn test_div_by_fifteen() {
+  if div_by_fifteen(1) {
+    panic!("One is not fifteen");
+  }
+}
+
+#[test]
+fn test_div_by_fifteen_with_fifteen() {
+  if !div_by_fifteen(15) {
+    panic!("Fifteen should be fifteen");
+  }
+}
+
+#[test]
+fn test_div_by_five() {
+  if div_by_five(1) {
+    panic!("One is not five");
+  }
+}
+
+#[test]
+fn test_div_by_five_with_five() {
+  if !div_by_five(5) {
+    panic!("Five should be five");
   }
 }
