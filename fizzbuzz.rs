@@ -1,5 +1,9 @@
 fn div_by_three(num: i8) -> bool {
-  false
+  if num % 3 == 0 {
+    true
+  } else {
+    false
+  }
 }
 
 #[test]
